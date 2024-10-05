@@ -23,3 +23,7 @@ The TensorFlow model was deployed using a serverless **SageMaker** endpoint.
 
 The Android application, built using **Android Studio** with **Java**, features **TensorFlow Lite** for on-device AI predictions, allowing users to classify strawberry plant diseases directly from their mobile devices. Read more about our app [here](https://aistrawberries.com/articles/1/).
 
+
+## Graph
+
+![Project Graph](Graph.png)
