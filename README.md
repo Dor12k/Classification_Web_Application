@@ -21,7 +21,8 @@ To build and train the AI model for classifying strawberry diseases, I worked Go
 The project was deployed on **AWS** **EC2** for hosting the web server, with **Nginx** as the reverse proxy, and I used **Docker** for containerization. Additionally, I utilized **AWS** **S3** for storage, ensuring data availability and security. For data management, I integrated **PostgreSQL** as the database system, hosted on **AWS** **RDS** (Relational Database Service).
 The TensorFlow model was deployed using a serverless **SageMaker** endpoint.
 
-The Android application, built using **Android Studio** with **Java**, features **TensorFlow Lite** for on-device AI predictions, allowing users to classify strawberry plant diseases directly from their mobile devices. Read more about our app [here](https://aistrawberries.com/articles/1/).
+The Android application, built using **Android Studio** with **Java**, features **TensorFlow Lite** for on-device AI predictions, allowing users to classify strawberry plant diseases directly from their mobile devices. 
+Read more about our app [here](https://aistrawberries.com/articles/1/).
 
 
 ## Graph
