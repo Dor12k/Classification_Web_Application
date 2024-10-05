@@ -32,7 +32,7 @@
     0%{transform: translateY(40px); opacity: 0%;}
     100%{transform: translateY(0px); opacity: 100%;}}
 video{
-    width: 55%;
+    width: 45%;
     border-radius: 30px 30px 30px 30px;
     height:510px; 
     margin-right:100px;}
