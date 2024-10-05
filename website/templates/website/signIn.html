@@ -1,0 +1,60 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block robots %}index, follow{% endblock %}
+{% block keyword %} signup, myshop {%endblock%}
+{% block description %}You can create an account{% endblock%}
+
+{% block nav %}{% static "website/css/nav.css" %}{% endblock %}
+{% block css %}{% static "website/css/signIn.css" %}{% endblock %}
+{% block footer %}{% static "website/css/footer.css" %}{% endblock %}
+
+
+{% block  title %}Strawberries{% endblock %}
+
+
+{% block body %} 
+    {% include "includes/nav.html" %}
+    
+    <section id="signIn">
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {% for field in form %}
+                {{field.label_tag}}
+                {{field}}
+
+                {% for error in field.errors %}
+                    <p style="color:red">{{error}}</p><br>
+                {% endfor %}
+
+            {% endfor %}
+            
+            {% if messages %}
+                {% for message in messages %}
+
+                    {% if message.tags == 'error' %}
+                        <h3 style="color:red">{{message}}</h3>
+                    {% endif %}
+
+                    {% if message.tags == 'success' %}
+                        <p style="color:green">{{message}}</p>
+                    {% endif %}
+
+                {% endfor %}
+            {% endif %}
+            
+            <br>
+            <button type="Submit">Submit</button>
+            <br><br>
+            <p id="txt">Don't have an account? <a href="{% url 'signUp' %}">Sign up</a></p>
+        </form>
+
+    </section>
+    {% include "includes/footer.html" %}
+    <script type="text/javascript" src="{% static 'website/js/signIn.js' %}"></script>
+{% endblock %}
+

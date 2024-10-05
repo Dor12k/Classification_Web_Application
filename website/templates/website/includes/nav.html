@@ -1,0 +1,82 @@
+
+{% load static %}
+
+
+<!-- ********************* Header **************** -->
+<header>  
+    
+    {% if not request.user.is_authenticated %}
+        
+        <a href="{% url "home" %}">
+            <img src="{% static "website/img/logo1.png" %}" width="200" alt="MyShop logo">
+        </a>
+
+        <nav class="main-nav"> 
+            <a href="{% url "home" %}" id="selected"> Home</a>
+            <a href="{% url "about" %}"> About</a>
+            <a href="{% url "signUp" %}"> Sign up</a>
+            <a href="{% url "signIn" %}"> Sign in</a>
+
+            <svg onclick="darkMode()" viewBox="0 0 512 512" width="25px" id="sun-icon">
+                <g id="Sun">
+                    <path d="M255.8,120a136,136,0,1,0,136,136.05v0A136.17,136.17,0,0,0,255.8,120Z" style="fill:#1e1e1e"/>
+                    <path d="M472,232H440a24,24,0,0,0,0,48h32a24,24,0,0,0,0-48Z" style="fill:#1e1e1e"/>
+                    <path d="M255.8,416a24,24,0,0,0-24,24v32a24,24,0,1,0,48,0V440A24,24,0,0,0,255.8,416Z" style="fill:#1e1e1e"/>
+                    <path d="M96,256.05a24,24,0,0,0-24-24H40a24,24,0,1,0,0,48H72A24,24,0,0,0,96,256.05Z" style="fill:#1e1e1e"/>
+                    <path d="M255.8,96a24,24,0,0,0,24-24V40a24,24,0,0,0-48,0V72a24,24,0,0,0,24,24Z" style="fill:#1e1e1e"/>
+                    <path d="M402.89,142.87l22.63-22.63a24,24,0,0,0-33.85-34l-.07.07L369,109a24,24,0,0,0,33.86,34Z" style="fill:#1e1e1e"/>
+                    <path d="M402.89,369.22a24,24,0,0,0-34,33.87l.06.05,22.63,22.63a24,24,0,0,0,34-33.86l-.06-.06Z" style="fill:#1e1e1e"/>
+                    <path d="M108.7,369.22,86.07,391.85a24,24,0,1,0,33.85,34l.07-.07,22.63-22.63a24,24,0,1,0-33.86-34Z" style="fill:#1e1e1e"/>
+                    <path d="M108.7,142.87a24,24,0,1,0,34-33.89l0,0L120,86.32a24,24,0,1,0-34,33.83l.09.09Z" style="fill:#1e1e1e"/>
+                </g>
+            </svg>
+
+            <svg onclick="lightMode()" height="45px" width="25px" version="1.1" id="moon-icon" 
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                viewBox="0 0 56 56" xml:space="preserve">
+                <path style="fill:#A5A5A4;" d="M29,28c0-11.917,7.486-22.112,18-26.147C43.892,0.66,40.523,0,37,0C21.561,0,9,12.561,9,28
+                s12.561,28,28,28c3.523,0,6.892-0.66,10-1.853C36.486,50.112,29,39.917,29,28z"/>
+            </svg>
+            
+        </nav>
+
+    {% else %}
+        
+        <a href="{% url "home" %}">
+            <img src="{% static "website/img/logo1.png" %}" width="200" alt="MyShop logo">
+        </a>
+        
+        <nav class="main-nav"> 
+            
+            <a href="{% url "home" %}" id="selected"> Home</a>
+            <a href="{% url "about" %}"> About</a>
+            <a href="{% url "signOut" %}"> Logout</a>
+            <a href="{% url "profile" request.user %}"> Profile</a>
+
+            <svg onclick="darkMode()" viewBox="0 0 512 512" width="25px" id="sun-icon">
+                <g id="Sun">
+                    <path d="M255.8,120a136,136,0,1,0,136,136.05v0A136.17,136.17,0,0,0,255.8,120Z" style="fill:#1e1e1e"/>
+                    <path d="M472,232H440a24,24,0,0,0,0,48h32a24,24,0,0,0,0-48Z" style="fill:#1e1e1e"/>
+                    <path d="M255.8,416a24,24,0,0,0-24,24v32a24,24,0,1,0,48,0V440A24,24,0,0,0,255.8,416Z" style="fill:#1e1e1e"/>
+                    <path d="M96,256.05a24,24,0,0,0-24-24H40a24,24,0,1,0,0,48H72A24,24,0,0,0,96,256.05Z" style="fill:#1e1e1e"/>
+                    <path d="M255.8,96a24,24,0,0,0,24-24V40a24,24,0,0,0-48,0V72a24,24,0,0,0,24,24Z" style="fill:#1e1e1e"/>
+                    <path d="M402.89,142.87l22.63-22.63a24,24,0,0,0-33.85-34l-.07.07L369,109a24,24,0,0,0,33.86,34Z" style="fill:#1e1e1e"/>
+                    <path d="M402.89,369.22a24,24,0,0,0-34,33.87l.06.05,22.63,22.63a24,24,0,0,0,34-33.86l-.06-.06Z" style="fill:#1e1e1e"/>
+                    <path d="M108.7,369.22,86.07,391.85a24,24,0,1,0,33.85,34l.07-.07,22.63-22.63a24,24,0,1,0-33.86-34Z" style="fill:#1e1e1e"/>
+                    <path d="M108.7,142.87a24,24,0,1,0,34-33.89l0,0L120,86.32a24,24,0,1,0-34,33.83l.09.09Z" style="fill:#1e1e1e"/>
+                </g>
+            </svg>
+
+            <svg onclick="lightMode()" height="45px" width="25px" version="1.1" id="moon-icon" 
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                viewBox="0 0 56 56" xml:space="preserve">
+                <path style="fill:#A5A5A4;" d="M29,28c0-11.917,7.486-22.112,18-26.147C43.892,0.66,40.523,0,37,0C21.561,0,9,12.561,9,28
+                s12.561,28,28,28c3.523,0,6.892-0.66,10-1.853C36.486,50.112,29,39.917,29,28z"/>
+            </svg>
+            
+        </nav>
+
+    {% endif %}
+
+</header>
+

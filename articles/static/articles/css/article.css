@@ -1,0 +1,179 @@
+
+/* ---------------  Product info  ------------ */
+#article-main-con{
+    width: 1200px;
+    margin: 50px auto;  
+}
+#article-main-con main{
+    display: flex;
+    width: 100%;
+    column-gap: 40px;
+    border-radius: 30px;
+    background-color: antiquewhite;
+}
+
+
+.details{
+    margin-top: 2%;
+    padding: 1%;
+    width: 70%;
+    font-size: 24px;
+}
+.details, h1{
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+.details, p{
+    height: 59%;
+    font-size: 26px;
+    padding-bottom: 25px;
+}
+.details a{
+    color: rgb(102, 102, 250);
+    text-decoration: none;
+    display: inline-table;
+}
+.details a:hover{
+    color: rgb(10, 30, 209);
+    transition-duration: 0.3s;
+    text-decoration: underline;
+}
+#introduction{
+    height: 220px;
+    padding-bottom: 1%;
+}
+/* -------------------- Article ----------------------- */
+#article-main-con .article{
+    display: block;
+    margin: 50px 0px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+.article p{  
+    padding:50px; 
+    font-size:26px; 
+}
+.article pre{  
+    padding:50px; 
+    font-size:22px; 
+    white-space: pre-wrap;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.article img{
+    display: flex;
+    margin: auto;
+    border-radius: 30px;
+    width: 50%;
+}
+video{
+    display: block; 
+    width: 400px; 
+    margin: auto;
+    border-radius: 40px;
+}
+video:hover{
+    cursor: pointer;}
+
+/* ---------------  Feedback form  ------------ */
+#feedback{
+    padding: 30px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#feedback input, #feedback textarea{
+    width: 97%;
+    display: block;
+    font-size: 18px;
+    padding: 7px 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 15px;
+}
+#feedback label{
+    font-weight: 300;
+    display: block;
+    margin-bottom: 5px;
+}
+#feedback button{
+    border: none;
+    border-radius: 15px;
+    background-color:rgb(87, 87, 224);
+    color: white;
+    font-size: 18px;
+    padding: 10px 30px;
+    width: 20%;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+#feedback button:hover{
+    background-color: rgb(50, 50, 155);
+}
+
+@media (max-width: 768px) {
+    /* Styles for mobile devices */
+
+    #article-main-con {
+        width: 100%;
+        margin: 50px auto;
+    }
+    #article-main-con main {
+        display: block;
+        width: 100%;
+        column-gap: 40px;
+        border-radius: 30px;
+        background-color: antiquewhite;
+    }
+    #article-main-con .details {
+        padding: 0% 8%;
+        width: 84%;
+        font-size: 24px;
+    }
+    .details h1{
+        font-size: 30px;
+    }
+    .details p{
+        height: 0%;
+        font-size: 17px;
+        margin-bottom: 5%;
+        padding-bottom: 0%;
+    }
+    .details a {
+        color: rgb(102, 102, 250);
+        text-decoration: none;
+        display: inline-table;
+    }
+    .article pre {
+        padding: 5% 5%;
+        font-size: 7px;
+        white-space: pre-wrap;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .article img {
+        width: 75%;
+    }
+    #introduction{
+        height: 160px;
+        padding-bottom: 1%;
+    }
+    video {
+        display: block;
+        width: 50%;
+        margin: auto;
+        border-radius: 20px;
+    }
+    #feedback button {
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(87, 87, 224);
+        color: white;
+        font-size: 18px;
+        padding: 10px 30px;
+        width: 100%;
+        cursor: pointer;
+        transition-duration: 0.2s;
+    }
+
+
+}

@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block robots %}index, follow{% endblock %}
+{% block keyword %} signup, myshop {%endblock%}
+{% block description %}You can create an account{% endblock%}
+
+{% block nav %}{% static "website/css/nav.css" %}{% endblock %}
+{% block css %}{% static "users/css/profile.css" %}{% endblock %}
+{% block footer %}{% static "website/css/footer.css" %}{% endblock %}
+
+
+{% block  title %}Strawberries{% endblock %}
+
+
+{% block body %} 
+    {% include "includes/nav.html" %}
+
+    <section class="profile">
+        
+        <main>
+            
+            <img src="{% static "users/img/man-avatar.png" %}" style="width: 50%">
+
+            <div class="details">
+                <h1> Your Profile </h1><br>
+                <p> Username: {{user_profile.username}} </p><br>
+                <p> User Email: {{user_profile.email}} </p>
+            </div>
+
+        </main>
+    </section>
+
+    {% include "includes/footer.html" %}
+    
+    <script type="text/javascript" src="{% static 'users/js/profile.js' %}"></script>
+
+{% endblock %}

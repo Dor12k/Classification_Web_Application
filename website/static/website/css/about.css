@@ -1,0 +1,85 @@
+
+.about{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: antiquewhite;   
+    box-shadow: 0px 10px 25px #00000043;}
+.about a{
+    transition-duration: 0.3s; 
+    color:rgb(64, 92, 251);
+}
+.about a:hover{
+    color: blue;
+    transition-duration: 0.4s;
+}
+.description{
+    width: 80%;
+    height: 90%;
+    margin: 50px 50px;
+    background-color: aliceblue;
+    border-radius: 100px;}
+#text{
+    margin: 80px;
+}
+#text p{
+    font-family: system-ui;
+    font-size: x-large;
+}
+.technologies{
+    width: 80%;
+    height: 90%;
+    margin: 50px 50px;
+    background-color: aliceblue;
+    border-radius: 100px;}
+.video{
+    width: 640px;
+    height: 800px;
+    margin: 50px 50px;
+    background-color: aliceblue;
+    border-radius: 100px;}
+#myVideo {
+    margin: 37% 0%;
+    border-radius: 100px;}
+
+@media (max-width: 640px) {
+    /* Force the layout from row to columns */
+    header.wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Reduce the image size on mobile, the most possible */
+    header.wrapper h1 img {
+        width: 180px;
+        height: auto;
+    }
+    .about{
+        display: block;
+        padding: 30px 0px;
+    }
+    .about a {
+        transition-duration: 0.3s;
+        color: rgb(64, 92, 251);
+        font-size: 13px;
+    }
+    .description {
+        padding-top: 45px;
+        padding-bottom: 50px;
+        width: 85%;
+        height: 90%;
+        margin: 0px 30px;
+        background-color: aliceblue;
+        border-radius: 100px;
+    }
+    #text {
+        margin: 0px 50px;
+    }
+    .technologies {
+        padding-top: 45px;
+        width: 85%;
+        height: 90%;
+        margin: 15px 30px;
+        background-color: aliceblue;
+        border-radius: 100px;
+    }
+}

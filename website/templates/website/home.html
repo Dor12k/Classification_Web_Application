@@ -1,0 +1,136 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block robots %}index, follow{% endblock %}
+{% block keyword %}strawberries diseases, classification{% endblock %}
+{% block description %}This is my description{% endblock %}
+
+{% block nav %}{% static "website/css/nav.css" %}{% endblock %}
+{% block css %}{% static "website/css/style.css" %}{% endblock %}
+{% block footer %}{% static "website/css/footer.css" %}{% endblock %}
+
+{% block title %}Strawberries{% endblock %}
+
+{% block body %} 
+    {% include "includes/nav.html" %}
+    
+    <!-- ************************************************** main content ************************************************** -->
+    <section id="intro">
+        <div id="intro-description">
+
+            <h1>Try Our New Application</h1>   
+            
+            <p> 
+                Discover our new Android app and easily classifies strawberry plant leaf diseases on the go! <br>
+                Enjoy fast and accurate results anytime, anywhere!
+                <br> 
+                <br>
+                Download today and get a 14-day free trial!
+            </p>
+
+            <a href="">
+            <img src="{% static "website/img/gg.png" %}" style="width:250px">
+            </a>
+        </div>
+
+        <video controls >
+            <source src="{% static "website/vid/App_Preview.mp4" %}">
+        </video>
+
+    </section>
+
+    <!-- ************************************************* Classification ************************************************* -->
+    <div class="classification">
+
+        <div class="explanation">
+
+            <h1> Quick Classification </h1>
+
+            <br>
+
+            <p> 
+                Use our model to quickly diagnose diseases in your plant's leaves.
+                Simply upload a photo of your strawberry plant leaf, and our model will classify the disease for you.
+                <b> Don't have an  image? </b> No problem browse 
+                <a href="{% url "gallery" %}" style="display:inline;">our gallery </a> and choose a sample to get started!
+            </p>
+
+        </div>
+        
+        <form action="" method="POST" enctype="multipart/form-data" id="drop-area" for="input-file">
+
+            {% csrf_token %}
+
+            <label for="input-file" id="drop-area-label">
+                <input name="image" type="file" accept="image/*" id="input-file" hidden>
+
+                <div class="img-view">
+                            
+                    <img src="{% static "website/img/upload.png" %}">
+                    
+                    <p>Drag and Drop or Click here to upload an image of a Strawberry Plant Leaf to Process</p>
+
+                    <br><br>
+                    
+                    <span>
+                        Image must be less than 50 MB
+                    </span>
+
+                </div>
+
+            </label>
+
+            <input type="button" onClick="clear_imgView()" value="Clear" class="btn btn-secondary" id="btn">
+            
+        </form>
+
+    </div>
+
+    <!-- ************************************************* Article nav ************************************************* -->
+    <div class="article-nav">
+        <h3>Popular articles</h3>
+        <a href="{% url "articlecat" %}">View all articles</a>
+    </div>
+
+    <!-- ************************************************* Article card ************************************************* -->
+    <main id="articles-intro">
+        
+      {% for article in articles %}
+      
+        {% if article.first_image.url != None %}
+            <div class="article-card">
+
+                <div class="review-con">
+                    <p style="color: white">Reviews {{article.average_rating}} ⭐</p>
+                </div>
+
+                <a href="{% url "article_page" article.slug %}">
+                <img src="{{article.first_image.url}}" class="article-img"></a>
+
+                <div style="padding: 10px 20px;">
+                    <h3 style="padding-bottom: 10px; height:40px">{{article.title}}</h3>
+                    <p style="margin-top: 5px; height:67px"> {{article.description}}</p>
+                    {% if article.author %}
+                        <p style="margin-top: 20px; font-weight: bold; color:#3a3a3a">{{article.author.name}}</p>
+                    {% endif %}
+                    <a href="{% url "article_page" article.slug %}">Read More</a>
+                </div>
+            </div>
+        {% endif %}
+
+        
+      {% endfor%}
+
+    </main>
+    
+    <!-- ************************************************* Footer ************************************************* -->     
+    {% include "includes/footer.html" %}
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'website/js/index.js' %}"></script>
+    
+{% endblock %}
+
+

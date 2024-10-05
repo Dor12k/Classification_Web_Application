@@ -1,0 +1,67 @@
+
+/* ----------------------- Genrall body style ----------------------------- */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.body-dark{
+    background-color: #1E1E1E;
+    color: white;
+}
+
+/* ---------------- navigation bar style ---------------- */
+header{
+    display: flex;
+    padding: 0 5%;
+    justify-content: space-between;
+    box-shadow: 0px 10px 25px #00000043;
+    height: 70px;
+    background-color: rgb(237, 237, 237);
+}
+header img{
+    padding-top: 12px;
+}
+.main-nav{
+    display: flex;
+    padding: 10px;
+    column-gap: 40px;
+    padding-top: 18px;
+}
+.main-nav a{
+    font-size: 20px;
+    color: #3d414a;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding-top: 5px;
+}
+.main-nav a:hover{
+    color: #579af8 !important;
+}
+
+header svg:hover{ cursor: pointer;}
+#moon-icon{ transform: translateY(-5px); display: none;}
+#sun-icon{ transform: translateY(-5px);}
+
+@media (max-width: 640px) {
+    header{
+        width: 90%;
+        height: 140px;
+        display: block;
+        box-shadow: 0px 10px 25px #00000043;
+        background-color: rgb(237, 237, 237);
+    }
+    header img{
+        margin-left: 25%;
+        padding-top: 12px;
+    }
+    .main-nav {
+        display: flex;
+        padding: 0%;
+        column-gap: 19px;
+        padding-top: 18px;
+    }
+    #sun-icon {
+        margin-top: 10px;
+        transform: translateY(-5px);}
+
+}

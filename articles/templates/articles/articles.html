@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block robots %}index, follow{% endblock %}
+{% block keyword %} signup, myshop {%endblock%}
+{% block description %}You can create an account{% endblock%}
+
+{% block nav %}{% static "website/css/nav.css" %}{% endblock %}
+{% block css %}{% static "articles/css/articles.css" %}{% endblock %}
+{% block footer %}{% static "website/css/footer.css" %}{% endblock %}
+
+{% block  title %}Strawberries{% endblock %}
+
+{% block body %} 
+    {% include "includes/nav.html" %}
+
+    <!-- ***************** main content ***************** -->    
+    <main id="article-con">
+            
+        {% for article in articles %}
+
+            {% if article.first_image.url is not None %}
+
+                {% if article.card == 'Left-Horizontal' %}
+
+                    <div class="article-horizontal-card">
+                        
+                        <div class="horizontal-review-con">
+                            <p style="color: white">Reviews {{article.average_rating}} ⭐</p>
+                        </div>
+                        
+                        <div class="article-horizontal-images">
+            
+                            <img src="{{article.first_image.url}}" class="article-horizontal-img">
+                            <img src="{% static "articles/img/locker.png" %}" class="locker-horizontal-img">
+                            
+                        </div>
+            
+                        <div style="padding: 20px 20px;">
+                            <h3 style="padding-bottom: 10px; height:40px">{{article.title}}</h3>
+                            <p style="height:67px"> {{article.description}}</p>
+                            {% if article.author %}
+                                <p style="font-weight: bold">{{article.author.name}}</p>
+                            {% endif %}
+                            <p id="readMore">Read More</p>
+                        </div>
+                        
+                    </div> 
+
+                {% endif %}
+                
+                {% if article.card == 'Vertical' %}
+
+                    <div class="article-vertical-card">
+                        
+                        <div class="vertical-review-con">
+                            <p style="color: white">Reviews {{article.average_rating}} ⭐</p>
+                        </div>
+                        
+                        <div class="article-vertical-images">
+            
+                            <img src="{{article.first_image.url}}" class="article-vertical-img">
+                            <img src="{% static "articles/img/locker.png" %}" class="locker-vertical-img">
+                            
+                        </div>
+            
+                        <div style="padding: 20px 20px;">
+                            <h3 style="padding-bottom: 10px; height:40px">{{article.title}}</h3>
+                            <p style="height:67px"> {{article.description}}</p>
+                            {% if article.author %}
+                                <p style="font-weight: bold">{{article.author.name}}</p>
+                            {% endif %}
+                            <p id="readMore">Read More</p>
+                        </div>
+                        
+                    </div> 
+
+                {% endif %}
+                
+                {% if article.card == 'Mid' %}
+
+                    <div class="article-mid-card">
+                        
+                        <div class="mid-review-con">
+                            <p style="color: white">Reviews {{article.average_rating}} ⭐</p>
+                        </div>
+                        
+                        <div class="article-mid-images">
+            
+                            <img src="{{article.first_image.url}}" class="article-mid-img">
+                            <img src="{% static "articles/img/locker.png" %}" class="locker-mid-img">
+                            
+                        </div>
+            
+                        <div style="padding: 20px 20px;">
+                            <h3 style="padding-bottom: 10px; height:40px">{{article.title}}</h3>
+                            <p style="height:67px"> {{article.description}}</p>
+                            {% if article.author %}
+                                <p style="font-weight: bold">{{article.author.name}}</p>
+                            {% endif %}
+                            <p id="readMore">Read More</p>
+                        </div>
+                        
+                    </div> 
+
+                {% endif %}
+                
+                {% if article.card == 'Flat' %}
+
+                    <div class="article-flat-card">
+                        
+                        <div class="flat-review-con">
+                            <p style="color: white">Reviews {{article.average_rating}} ⭐</p>
+                        </div>
+                        
+                        <div class="article-flat-images">
+            
+                            <img src="{{article.first_image.url}}" class="article-flat-img">
+                            <img src="{% static "articles/img/locker.png" %}" class="locker-flat-img">
+                            
+                        </div>
+            
+                        <div style="padding: 20px 20px;">
+                            <h3 style="padding-bottom: 10px; height:40px">{{article.title}}</h3>
+                            <p style="height:67px"> {{article.description}}</p>
+                            {% if article.author %}
+                                <p style="font-weight: bold">{{article.author.name}}</p>
+                            {% endif %}
+                            <p id="readMore">Read More</p>
+                        </div>
+                        
+                    </div> 
+
+                {% endif %}
+                
+                {% if article.card == 'Right-Horizontal' %}
+
+                    <div class="article-end-card">
+                        
+                        <div class="end-review-con">
+                            <p style="color: white">Reviews {{article.average_rating}} ⭐</p>
+                        </div>
+                        
+                        <div class="article-end-images">
+            
+                            <img src="{{article.first_image.url}}" class="article-end-img">
+                            <img src="{% static "articles/img/locker.png" %}" class="locker-end-img">
+                            
+                        </div>
+            
+                        <div style="padding: 20px 20px;">
+                            <h3 style="padding-bottom: 10px; height:40px">{{article.title}}</h3>
+                            <p style="height:67px"> {{article.description}}</p>
+                            {% if article.author %}
+                                <p style="font-weight: bold">{{article.author.name}}</p>
+                            {% endif %}
+                            <p id="readMore">Read More</p>
+                        </div>
+                        
+                    </div> 
+
+                {% endif %}
+
+                {% if article.card == 'regular' %}
+                    <div class="article-card">
+
+                        <div class="review-con">
+                            <p style="color: white">Reviews {{article.average_rating}} ⭐</p>
+                        </div>
+
+                        {% if article.first_image.url != None %}
+                            <a href="{% url "article_page" article.slug %}">
+                            <img src="{{article.first_image.url}}" class="article-img"></a>
+                        {% endif %}
+
+                        <div style="padding: 10px 20px;">
+
+                            <h3 style="padding-bottom: 10px; height:40px">{{article.title}}</h3>
+
+                            <p style="margin-top: 5px; height:67px"> {{article.description}}</p>
+
+                            {% if article.author %}
+                                <p style="margin-top: 20px; font-weight: bold; color:#3a3a3a">{{article.author.name}}</p>
+                            {% endif %}
+                            
+                            <a href="{% url "article_page" article.slug %}">Read More</a>
+
+                        </div>
+                        
+                    </div>
+                    
+                {% endif %}
+
+            {% endif %}
+
+        {% endfor%}
+                
+    </main>
+
+    {% include "includes/footer.html" %}
+    <script type="text/javascript" src="{% static 'articles/js/articles.js' %}"></script>
+{% endblock %}
