@@ -9,10 +9,9 @@ In addition to disease classification, aiStrawberries serves as a rich resource 
 
 We also feature cutting-edge articles on artificial intelligence and computer vision, exploring how these technologies are transforming agriculture and beyond. We recommend signing up for our platform and subscribing to our newsletter to receive our best articles and news before anyone else!
 
-So click on the Subscribe button and join us to explore the world of strawberries and discover the latest advancements in AI and precision farming, all in one place!
-<br>
-https://github.com/user-attachments/assets/f6e23f15-7aa6-46d2-9375-a0d1ba207f73
-<br>
+So click on the Subscribe button and join us to explore the world of strawberries and discover the latest advancements in AI and precision farming, all in one place! 
+
+https://private-user-images.githubusercontent.com/107938584/374960217-17af9d06-baf6-48c8-84cc-ee3b440ffc11.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjg0Nzc3NTEsIm5iZiI6MTcyODQ3NzQ1MSwicGF0aCI6Ii8xMDc5Mzg1ODQvMzc0OTYwMjE3LTE3YWY5ZDA2LWJhZjYtNDhjOC04NGNjLWVlM2I0NDBmZmMxMS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwOVQxMjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kMTVlY2MwMmJkZGNiYjAwNmM1ZDM0ZGQyNmI0NzgwYmJkZjQ1MzhiMmI3OGEyYjJmY2MwZDI0ZTk4ODJiNjdlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.UfUSTHbaMiXT-boyVmuKGh1NEzOOSyFsUNOwJ6AgRDw
 
 ## Technologies
 
