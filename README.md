@@ -10,7 +10,9 @@ In addition to disease classification, aiStrawberries serves as a rich resource 
 We also feature cutting-edge articles on artificial intelligence and computer vision, exploring how these technologies are transforming agriculture and beyond. We recommend signing up for our platform and subscribing to our newsletter to receive our best articles and news before anyone else!
 
 So click on the Subscribe button and join us to explore the world of strawberries and discover the latest advancements in AI and precision farming, all in one place!
-
+<br>
+https://github.com/user-attachments/assets/f6e23f15-7aa6-46d2-9375-a0d1ba207f73
+<br>
 
 ## Technologies
 
